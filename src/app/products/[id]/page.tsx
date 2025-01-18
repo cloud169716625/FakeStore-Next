@@ -12,10 +12,10 @@ export default async function ProductDetail({params}: ProductDetailProps) {
       <Link href="/" className="text-blue-500 hover:underline mb-4 inline-block">
         ← Back to Products
       </Link>
-      <h1 className="text-2xl font-bold">{product.title}</h1>
-      <img src={product.image} alt={product.title} className="w-full max-w-md mx-auto my-4" />
-      <p className="text-gray-700">{product.description}</p>
-      <p className="text-lg font-bold mt-2">${product.price}</p>
+      <h1 className="text-2xl font-bold  text-center">{product.title}</h1>
+      <img src={product.image} alt={product.title} className="w-full max-w-md mx-auto my-6" />
+      <p className="text-gray-700 text-justify px-3">{product.description}</p>
+      <p className="text-lg font-bold mt-2  text-center">${product.price}</p>
     </main>
   );
 }
