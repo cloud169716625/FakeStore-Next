@@ -4,7 +4,6 @@ import { hostname } from "os";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["./public"],
     remotePatterns: [
       {
         protocol: "https",
