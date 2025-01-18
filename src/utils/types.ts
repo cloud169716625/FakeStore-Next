@@ -14,3 +14,7 @@ export type ProductCardProps = {
 export type ProductGridProps = {
   products: Product[];
 }
+
+export type ProductDetailProps = {
+  params: {id: string};
+}

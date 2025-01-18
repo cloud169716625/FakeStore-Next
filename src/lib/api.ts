@@ -1,10 +1,10 @@
 import { Product } from "@/utils/types";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
-export const fetchProducts = async( page: number, limit: number ): Promise<Product[]> => {
-  const offset = (page-1) *limit; //Calculate the starting point ofr 
-  const res = await fetch(`${BASE_URL}?limit=${limit}&offset=${offset}`);
+// There is no "offset" in fakestoreAPI.com
+// From this reason, I upload all the products at once
+export const fetchProducts = async(): Promise<Product[]> => {
+  const res = await fetch(`${BASE_URL}`);
   if(!res.ok) throw new Error('Faied to fetch projects');
   return res.json();
 } 

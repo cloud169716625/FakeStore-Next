@@ -2,14 +2,11 @@ import Link from "next/link";
 import { Product } from "@/utils/types";
 import { ProductDetailProps } from "@/utils/types";
 import { fetchProductById } from "@/lib/api";
-import { error } from "console";
 
 export default async function ProductDetail({params}: ProductDetailProps) {
-  const id = await parseInt(params?.id, 10);
-  if(isNaN(id)) {
-    throw new Error(" Invalid product ID ");
-  }
-  const product:Product = await fetchProductById(id);
+  const {id} = await params;
+  const id_num = parseInt(id);
+  const product:Product = await fetchProductById(id_num);
   return (
     <main className="container mx-auto p-4">
       <Link href="/" className="text-blue-500 hover:underline mb-4 inline-block">

@@ -1,0 +1,1 @@
+export const initial_products = 8
