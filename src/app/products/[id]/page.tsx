@@ -13,7 +13,7 @@ export default async function ProductDetail({params}: ProductDetailProps) {
         ← Back to Products
       </Link>
       <h1 className="text-2xl font-bold  text-center">{product.title}</h1>
-      <img src={product.image} alt={product.title} className="w-full max-w-md mx-auto my-6" />
+      <img src={product.image} alt={product.title} className="w- max-h-[500px] max-w-md mx-auto my-6" />
       <p className="text-gray-700 text-justify px-3">{product.description}</p>
       <p className="text-lg font-bold mt-2  text-center">${product.price}</p>
     </main>

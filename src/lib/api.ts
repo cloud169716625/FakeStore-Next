@@ -1,6 +1,6 @@
 import { Product } from "@/utils/types";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = "https://fakestoreapi.com/products";
 // There is no "offset" in fakestoreAPI.com
 // From this reason, I upload all the products at once
 export const fetchProducts = async(): Promise<Product[]> => {
